@@ -7,13 +7,7 @@ public:
         
         unordered_map<int, int> numMap;
         for (int i = 0; i < nums.size(); i++) {
-            if (numMap.find(nums[i]) != numMap.end()) {
-                unordered_map<int, int>::iterator it = numMap.find(nums[i]);
-                (it -> second)++;
-            }
-            else {
-                numMap.insert({nums[i], 1});
-            }
+            numMap[nums[i]]++;
         }
         
         vector<int> result;
